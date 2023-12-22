@@ -1,0 +1,226 @@
+@charset "utf-8";
+
+@font-face {
+    
+    font-family:font2;
+    src: url(DK\ Ruby\ Red.otf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #000000;
+    font-family:;
+    background:#252323;
+
+}
+
+h1,
+h2 {
+    font-weight: 800;
+    color: #000000;
+    font-family:font2;
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+   background-color: rgb(255, 255, 255);
+}
+
+main {
+    display: block;
+    background: #000000;
+}
+
+.container {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 20px;
+    animation: surgir 5s ease-in-out;
+    animation-timeline: view();
+    animation-range: cover 10% cover 50%;
+    font-size:20px;
+}
+
+section.modulo p {
+    margin-bottom: 40px;
+    text-align: justify;
+    font-size: 1.4em;
+}
+
+section.modulo h2 {
+    margin-bottom: 40px;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-align: center;
+}
+
+section.modulo.content {
+    padding: 40px 0;
+    background: #7a0303;
+}
+
+section.modulo.parallax {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh !important;
+    position: relative;
+    overflow: hidden;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+section.modulo.parallax h1 {
+    color: #d31212;
+    text-shadow: 5px 5px 5px #380101a4;
+    font-size: 4em;
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 50;
+}
+
+section.modulo.parallax:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(255, 255, 255, 0) 80%, rgb(0, 0, 0) 100%);
+}
+
+@keyframes surgir {
+    from {
+        opacity: 0;
+        translate: -100vw 0;
+
+    }
+
+    to {
+        opacity: 1;
+        translate: 0 0;
+
+    }
+
+}
+
+
+
+section.modulo.parallax-1 {
+    background-image: url("https://cdn.discordapp.com/attachments/798024761736953878/1187517011924881469/20211028_014227.png?ex=65972c66&is=6584b766&hm=a2906dfbda6e7415bc767ee95a9c1221a0365f11c5b4a4f8337f83f6d28de13a&");
+}
+
+section.modulo.parallax-2 {
+    background-image: url("https://cdn.discordapp.com/attachments/798024761736953878/1187517267676758047/20220205_140143.png?ex=65972ca3&is=6584b7a3&hm=93abd3b5678dd915f7ccd4fcf95b4cd5650429c7c409bae0109c9aa17eae51e2&");
+}
+
+section.modulo.parallax-3 {
+    background-image: url("https://cdn.discordapp.com/attachments/798024761736953878/1187518911164457022/Screenshot_20211102-154657.png?ex=65972e2b&is=6584b92b&hm=63a8274458c322d640352b3f07d910906e323675c8fbb9f135d987b133c4b594&");
+}
+
+.galeria{
+    display: flex;
+    height: 20em;
+    margin: 2em;
+    gap: 0.5em;
+    padding: 30px;
+   
+}
+
+.galeria div{
+    flex: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:75%;
+    transition: all 0.8s cubic-bezier(0.47, 0, 0.745, 0.715);
+    
+    
+}
+
+.galeria div:hover{
+flex: 2em;
+}
+
+.galeria:hover div:not(:hover){
+    filter: blur(3px);
+    filter: grayscale(1);}
+
+footer{
+    text-align: center;
+    background-color:#000000;
+    background:#2E8B57;
+    padding: 10px;
+    padding-top: 50px;
+}
+
+
+
+@media all and (max-width: 760px) {
+
+    section.modulo p {
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 1em;
+    }
+
+    section.modulo.parallax h1 {
+        font-size: 1.5em;
+    }
+
+    section.modulo.content {
+        width: 95%;
+        background-color: #d8cdcd;
+    }
+
+    section.modulo.parallax-1 {
+        background-image: url();
+    }
+
+    section.modulo.parallax-2 {
+        background-image: url();
+    }
+
+    section.modulo.parallax-3 {
+        background-image: url();
+    }
+
+    footer{
+        text-align: center;
+        background-color:#d8cdcd;
+    background:#d8cdcd;
+    padding: 10px;
+    }
+}
+
+.scale-up-center {
+	-webkit-animation: scale-up-center 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-center 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+ @-webkit-keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  @keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  
